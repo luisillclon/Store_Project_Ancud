@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LuisClon</title>
+  <link rel="icon" href="media/icon.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://kit.fontawesome.com/5ff8f50491.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <header class="container">
+    <!-- Navigation -->
+    <nav class="navigation container">
+      <img class="navigation__brand" src="media/navigation/brand.jpg" alt="Logo de la Pagina Web" />
+      <input class="navigation__input" type="text" />
+      <div class="navigation__actions">
+        <li>Hola, Iniciar sesion</li>
+        <li>Mis Canciones</li>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-braznds fa-github"></i>
+      </div>
+    </nav>
+    <!-- Message Container -->
+    <div class="message container">
+      <div class="message__info--1">
+        <i class="fa-solid fa-music" style="color: #9808aa;"></i>
+        <a href="#">Cambia - Ancud, escuchala de fondo! </a>
+        <!--Escucha la ultima cacnion de fondo-->
+      </div>
+
+      <ul class="message__info--2">
+        <li><a href="">German Garmendia</a></li>
+        <li><a href="">Juegagerman</a></li>
+        <li><a href="">HolaSoyGerman</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="slider container">
+      <article class="slider__container">
+        <img src="media/slider/banner1.png" class="slider__container--img" />
+        <img src="media/slider/banner2.png" class="slider__container--img" />
+        <img src="media/slider/banner3.png" class="slider__container--img" />
+        <img src="media/slider/banner2.png" class="slider__container--img" />
+      </article>
+    </section>
+    <section class="counter">
+      <!--Me esta faltando poner elementos que, de manera ordenada, muestren los datos de los canales con sus iconos respectivos-->
+    </section>
+    <section class="information">
+      <article class="information__content">
+        <video src="media/information/normal.mp4" muted autoplay></video>
+        <video src="media/information/cambia.mp4" muted autoplay></video>
+        <video src="media/information/dreams.mp4" muted autoplay></video>
+        <video src="media/information/young.mp4" muted autoplay></video>
+      </article>
+    </section>
+
+
+    <section class="audioPlayer">
+      <div class="holder">
+        <div class="audioPlayer__brand">
+          <img src="media/navigation/brand.jpg">
+        </div>
+        <div class="audio-wrapper" id="player-container" href="javascript:;">
+          <audio id="player" preload="metadata" onloadedmetadata="mDur()" ontimeupdate="initProgressBar()">
+            <source src="media/music/Evangelion.mp3" type="audio/mp3">
+          </audio>
+        </div>
+        <div class="player-controls scrubber">
+          <div>
+            <div>
+              <p class="title"></p>
+            </div>
+            <div class="range">
+              <input id="dur" type="range" class="range" name="rng" min="0" max="1" step="0.00000001" value="0"
+                onchange="mSet()" style="width: 100%">
+            </div>
+            <br>
+            <span class="time start-time"></span>
+            <span class="time end-time"></span>
+            <br>
+            <div class="ctrl">
+              <div>
+                <a href="#prev" class="ctrl_btn " id="prev"><i class="fa fa-arrow-left"></i></a>
+                <span id="play-btn" class="fa fa-play "></span>
+                <a href="#next" class="ctrl_btn " id="next"><i class="fa fa-arrow-right"></i></a>
+              </div>
+              <div class="volumeControl">
+                <div class="wrapper">
+                  <i class="fa fa-volume-up"></i>
+                  <span class="outer">
+                    <span class="inner"></span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</body>
+
+</html>
